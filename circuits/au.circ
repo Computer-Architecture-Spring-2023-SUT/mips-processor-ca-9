@@ -1086,7 +1086,13 @@
       <a name="shift" val="ar"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="3" loc="(840,130)" name="Adder">
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="3" loc="(840,1370)" name="Adder">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(840,1450)" name="Adder">
       <a name="width" val="32"/>
     </comp>
     <comp lib="3" loc="(840,210)" name="Subtractor">
@@ -1663,7 +1669,9 @@
     <wire from="(840,1090)" to="(870,1090)"/>
     <wire from="(840,1170)" to="(870,1170)"/>
     <wire from="(840,1260)" to="(870,1260)"/>
+    <wire from="(840,130)" to="(870,130)"/>
     <wire from="(840,1370)" to="(870,1370)"/>
+    <wire from="(840,1450)" to="(870,1450)"/>
     <wire from="(840,1540)" to="(870,1540)"/>
     <wire from="(840,210)" to="(870,210)"/>
     <wire from="(840,50)" to="(870,50)"/>
