@@ -29,6 +29,10 @@
       <a name="value" val="0xff"/>
       <a name="width" val="8"/>
     </tool>
+    <tool name="Bit Extender">
+      <a name="in_width" val="16"/>
+      <a name="out_width" val="32"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
@@ -37,10 +41,10 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#regfile.circ" name="8"/>
+  <lib desc="file#au.circ" name="8"/>
   <lib desc="file#mem.circ" name="9"/>
   <lib desc="file#bitExtender.circ" name="10"/>
-  <lib desc="file#au.circ" name="11"/>
+  <lib desc="file#regfile.circ" name="11"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -79,6 +83,11 @@
     <a name="circuit" val="cpu"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1140,1030)" name="Bit Extender">
+      <a name="in_width" val="16"/>
+      <a name="out_width" val="32"/>
+      <a name="type" val="zero"/>
+    </comp>
     <comp lib="0" loc="(1280,620)" name="Constant">
       <a name="value" val="0x2"/>
       <a name="width" val="5"/>
@@ -144,8 +153,9 @@
       <a name="fanout" val="3"/>
       <a name="incoming" val="16"/>
     </comp>
-    <comp lib="10" loc="(1240,1030)" name="bitExtender"/>
-    <comp lib="11" loc="(1830,740)" name="ALU"/>
+    <comp lib="11" loc="(1240,790)" name="regfile">
+      <a name="label" val="RegisterFile"/>
+    </comp>
     <comp lib="2" loc="(1410,820)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
@@ -173,15 +183,13 @@
       <a name="label" val="PC"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="6" loc="(1486,1127)" name="Text">
+    <comp lib="6" loc="(1485,1125)" name="Text">
       <a name="text" val="from ALUControl"/>
     </comp>
-    <comp lib="6" loc="(622,676)" name="Text">
+    <comp lib="6" loc="(620,675)" name="Text">
       <a name="text" val="toControl"/>
     </comp>
-    <comp lib="8" loc="(1240,790)" name="regfile">
-      <a name="label" val="RegisterFile"/>
-    </comp>
+    <comp lib="8" loc="(1830,740)" name="ALU"/>
     <comp lib="9" loc="(2350,740)" name="mem">
       <a name="label" val="DataMem"/>
     </comp>
@@ -190,7 +198,7 @@
     </comp>
     <wire from="(1020,770)" to="(1020,790)"/>
     <wire from="(1020,800)" to="(1020,810)"/>
-    <wire from="(1240,1030)" to="(1350,1030)"/>
+    <wire from="(1140,1030)" to="(1350,1030)"/>
     <wire from="(1240,790)" to="(1430,790)"/>
     <wire from="(1240,810)" to="(1280,810)"/>
     <wire from="(1280,620)" to="(1380,620)"/>
@@ -258,7 +266,7 @@
     <wire from="(460,810)" to="(520,810)"/>
     <wire from="(520,790)" to="(520,810)"/>
     <wire from="(520,790)" to="(530,790)"/>
-    <wire from="(550,1030)" to="(1020,1030)"/>
+    <wire from="(550,1030)" to="(1100,1030)"/>
     <wire from="(550,700)" to="(550,750)"/>
     <wire from="(550,700)" to="(640,700)"/>
     <wire from="(550,770)" to="(1020,770)"/>
