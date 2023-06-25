@@ -41,9 +41,10 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#mem.circ" name="8"/>
+  <lib desc="file#au.circ" name="8"/>
   <lib desc="file#regfile.circ" name="9"/>
-  <lib desc="file#au.circ" name="10"/>
+  <lib desc="file#mem.circ" name="10"/>
+  <lib desc="file#NewCacheMemory.circ" name="11"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -556,8 +557,12 @@
     <comp lib="1" loc="(70,650)" name="NOT Gate">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="10" loc="(1000,820)" name="ALU_Control"/>
-    <comp lib="10" loc="(1510,190)" name="ALU"/>
+    <comp lib="10" loc="(1810,550)" name="mem">
+      <a name="label" val="DataMem"/>
+    </comp>
+    <comp lib="10" loc="(450,550)" name="mem">
+      <a name="label" val="InstMem"/>
+    </comp>
     <comp lib="2" loc="(1890,560)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
@@ -591,12 +596,8 @@
     <comp lib="6" loc="(270,140)" name="Text">
       <a name="text" val="PC Control"/>
     </comp>
-    <comp lib="8" loc="(1810,550)" name="mem">
-      <a name="label" val="DataMem"/>
-    </comp>
-    <comp lib="8" loc="(450,550)" name="mem">
-      <a name="label" val="InstMem"/>
-    </comp>
+    <comp lib="8" loc="(1000,820)" name="ALU_Control"/>
+    <comp lib="8" loc="(1510,190)" name="ALU"/>
     <comp lib="9" loc="(1320,550)" name="regfile">
       <a name="label" val="RegisterFile"/>
     </comp>
