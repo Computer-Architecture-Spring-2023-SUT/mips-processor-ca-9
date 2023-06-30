@@ -40,11 +40,11 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6"/>
   <lib desc="#BFH-Praktika" name="7"/>
-  <lib desc="file#regfile.circ" name="8"/>
-  <lib desc="file#NewCacheMemory.circ" name="9"/>
-  <lib desc="file#mem.circ" name="10"/>
-  <lib desc="file#au.circ" name="11"/>
-  <lib desc="file#fiveCounter.circ" name="12"/>
+  <lib desc="file#au.circ" name="8"/>
+  <lib desc="file#fiveCounter.circ" name="9"/>
+  <lib desc="file#regfile.circ" name="10"/>
+  <lib desc="file#mem.circ" name="11"/>
+  <lib desc="file#NewCacheMemory.circ" name="12"/>
   <main name="cpu"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -1269,15 +1269,15 @@
     <comp lib="1" loc="(260,410)" name="NOT Gate">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="10" loc="(2910,330)" name="mem">
+    <comp lib="10" loc="(1480,650)" name="regfile">
+      <a name="label" val="RegisterFile"/>
+    </comp>
+    <comp lib="11" loc="(2910,330)" name="mem">
       <a name="label" val="DataMem"/>
     </comp>
-    <comp lib="10" loc="(420,600)" name="mem">
+    <comp lib="11" loc="(420,600)" name="mem">
       <a name="label" val="InstMem"/>
     </comp>
-    <comp lib="11" loc="(2150,140)" name="ALU"/>
-    <comp lib="11" loc="(2150,300)" name="ALU_Control"/>
-    <comp lib="12" loc="(1190,1260)" name="fiveCounter"/>
     <comp lib="2" loc="(1130,740)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
@@ -1311,9 +1311,9 @@
     <comp lib="6" loc="(290,40)" name="Text">
       <a name="text" val="PC Control"/>
     </comp>
-    <comp lib="8" loc="(1480,650)" name="regfile">
-      <a name="label" val="RegisterFile"/>
-    </comp>
+    <comp lib="8" loc="(2150,140)" name="ALU"/>
+    <comp lib="8" loc="(2150,300)" name="ALU_Control"/>
+    <comp lib="9" loc="(1190,1260)" name="fiveCounter"/>
     <comp loc="(1190,1070)" name="SaturationCounter"/>
     <comp loc="(1860,590)" name="BigBuffer"/>
     <comp loc="(2480,610)" name="BigBuffer"/>
