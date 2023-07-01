@@ -1049,7 +1049,7 @@
     </comp>
     <comp lib="0" loc="(2170,990)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="stop"/>
+      <a name="label" val="ForceStop"/>
     </comp>
     <comp lib="0" loc="(2180,630)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -1128,13 +1128,6 @@
       <a name="facing" val="east"/>
       <a name="label" val="PCcontrol_1"/>
       <a name="width" val="2"/>
-    </comp>
-    <comp lib="0" loc="(2260,1600)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="isSATequalPC"/>
-    </comp>
-    <comp lib="0" loc="(2280,1600)" name="Tunnel">
-      <a name="label" val="stop"/>
     </comp>
     <comp lib="0" loc="(230,1460)" name="Splitter">
       <a name="appear" val="center"/>
@@ -1937,7 +1930,6 @@
     <wire from="(2240,610)" to="(2260,610)"/>
     <wire from="(2240,650)" to="(2260,650)"/>
     <wire from="(2250,950)" to="(2260,950)"/>
-    <wire from="(2260,1600)" to="(2280,1600)"/>
     <wire from="(230,1460)" to="(240,1460)"/>
     <wire from="(2350,60)" to="(2350,2490)"/>
     <wire from="(240,1390)" to="(240,1460)"/>
